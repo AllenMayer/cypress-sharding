@@ -1,0 +1,30 @@
+{
+  "name": "cypress-split-example",
+  "version": "1.0.0",
+  "description": "Split Cypress specs on GitHub Actions and CircleCI",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "cypress run",
+    "badges": "npx -p dependency-version-badge update-badge cypress cypress-split",
+    "debug": "DEBUG=cypress-split SPLIT=6 SPLIT_INDEX=5 npx cypress run",
+    "lint": "tsc --noEmit cypress.config.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/cypress-split-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bahmutov/cypress-split-example/issues"
+  },
+  "homepage": "https://github.com/bahmutov/cypress-split-example#readme",
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "cypress-split": "1.23.2",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.2"
+  }
+}
